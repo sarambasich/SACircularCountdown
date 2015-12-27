@@ -13,6 +13,7 @@
 		F8F9A5401C2F039200EE7C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8F9A53F1C2F039200EE7C24 /* Assets.xcassets */; };
 		F8F9A5431C2F039200EE7C24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8F9A5411C2F039200EE7C24 /* LaunchScreen.storyboard */; };
 		F8F9A54E1C2F039200EE7C24 /* SACircularCountdownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F9A54D1C2F039200EE7C24 /* SACircularCountdownTests.swift */; };
+		F8F9A5591C2F03CB00EE7C24 /* SACircularCountdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F9A5581C2F03CB00EE7C24 /* SACircularCountdown.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,7 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F8F9A5351C2F039200EE7C24 /* SACircularCountdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SACircularCountdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8F9A5351C2F039200EE7C24 /* SACircularCountdownDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SACircularCountdownDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F9A5381C2F039200EE7C24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8F9A53A1C2F039200EE7C24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F8F9A53D1C2F039200EE7C24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -36,6 +37,7 @@
 		F8F9A5491C2F039200EE7C24 /* SACircularCountdownTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SACircularCountdownTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F9A54D1C2F039200EE7C24 /* SACircularCountdownTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SACircularCountdownTests.swift; sourceTree = "<group>"; };
 		F8F9A54F1C2F039200EE7C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8F9A5581C2F03CB00EE7C24 /* SACircularCountdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SACircularCountdown.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +70,7 @@
 		F8F9A5361C2F039200EE7C24 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F8F9A5351C2F039200EE7C24 /* SACircularCountdown.app */,
+				F8F9A5351C2F039200EE7C24 /* SACircularCountdownDemo.app */,
 				F8F9A5491C2F039200EE7C24 /* SACircularCountdownTests.xctest */,
 			);
 			name = Products;
@@ -83,6 +85,7 @@
 				F8F9A53F1C2F039200EE7C24 /* Assets.xcassets */,
 				F8F9A5411C2F039200EE7C24 /* LaunchScreen.storyboard */,
 				F8F9A5441C2F039200EE7C24 /* Info.plist */,
+				F8F9A5581C2F03CB00EE7C24 /* SACircularCountdown.swift */,
 			);
 			path = SACircularCountdown;
 			sourceTree = "<group>";
@@ -99,9 +102,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F8F9A5341C2F039200EE7C24 /* SACircularCountdown */ = {
+		F8F9A5341C2F039200EE7C24 /* SACircularCountdownDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8F9A5521C2F039200EE7C24 /* Build configuration list for PBXNativeTarget "SACircularCountdown" */;
+			buildConfigurationList = F8F9A5521C2F039200EE7C24 /* Build configuration list for PBXNativeTarget "SACircularCountdownDemo" */;
 			buildPhases = (
 				F8F9A5311C2F039200EE7C24 /* Sources */,
 				F8F9A5321C2F039200EE7C24 /* Frameworks */,
@@ -111,9 +114,9 @@
 			);
 			dependencies = (
 			);
-			name = SACircularCountdown;
+			name = SACircularCountdownDemo;
 			productName = SACircularCountdown;
-			productReference = F8F9A5351C2F039200EE7C24 /* SACircularCountdown.app */;
+			productReference = F8F9A5351C2F039200EE7C24 /* SACircularCountdownDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F8F9A5481C2F039200EE7C24 /* SACircularCountdownTests */ = {
@@ -166,7 +169,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F8F9A5341C2F039200EE7C24 /* SACircularCountdown */,
+				F8F9A5341C2F039200EE7C24 /* SACircularCountdownDemo */,
 				F8F9A5481C2F039200EE7C24 /* SACircularCountdownTests */,
 			);
 		};
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8F9A53B1C2F039200EE7C24 /* ViewController.swift in Sources */,
+				F8F9A5591C2F03CB00EE7C24 /* SACircularCountdown.swift in Sources */,
 				F8F9A5391C2F039200EE7C24 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,7 +219,7 @@
 /* Begin PBXTargetDependency section */
 		F8F9A54B1C2F039200EE7C24 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F8F9A5341C2F039200EE7C24 /* SACircularCountdown */;
+			target = F8F9A5341C2F039200EE7C24 /* SACircularCountdownDemo */;
 			targetProxy = F8F9A54A1C2F039200EE7C24 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -381,13 +385,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8F9A5521C2F039200EE7C24 /* Build configuration list for PBXNativeTarget "SACircularCountdown" */ = {
+		F8F9A5521C2F039200EE7C24 /* Build configuration list for PBXNativeTarget "SACircularCountdownDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8F9A5531C2F039200EE7C24 /* Debug */,
 				F8F9A5541C2F039200EE7C24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8F9A5551C2F039200EE7C24 /* Build configuration list for PBXNativeTarget "SACircularCountdownTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +401,7 @@
 				F8F9A5571C2F039200EE7C24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

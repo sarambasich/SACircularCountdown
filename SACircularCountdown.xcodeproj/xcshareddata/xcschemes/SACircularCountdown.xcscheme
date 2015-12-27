@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F8F9A5341C2F039200EE7C24"
-               BuildableName = "SACircularCountdown.app"
-               BlueprintName = "SACircularCountdown"
+               BuildableName = "SACircularCountdownDemo.app"
+               BlueprintName = "SACircularCountdownDemo"
                ReferencedContainer = "container:SACircularCountdown.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F8F9A5341C2F039200EE7C24"
-            BuildableName = "SACircularCountdown.app"
-            BlueprintName = "SACircularCountdown"
+            BuildableName = "SACircularCountdownDemo.app"
+            BlueprintName = "SACircularCountdownDemo"
             ReferencedContainer = "container:SACircularCountdown.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -66,8 +66,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F8F9A5341C2F039200EE7C24"
-            BuildableName = "SACircularCountdown.app"
-            BlueprintName = "SACircularCountdown"
+            BuildableName = "SACircularCountdownDemo.app"
+            BlueprintName = "SACircularCountdownDemo"
             ReferencedContainer = "container:SACircularCountdown.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -85,8 +85,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F8F9A5341C2F039200EE7C24"
-            BuildableName = "SACircularCountdown.app"
-            BlueprintName = "SACircularCountdown"
+            BuildableName = "SACircularCountdownDemo.app"
+            BlueprintName = "SACircularCountdownDemo"
             ReferencedContainer = "container:SACircularCountdown.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
