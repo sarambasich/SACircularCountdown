@@ -33,7 +33,7 @@ private let π = CGFloat(M_PI)
     Circular-wedge shaped countdown widget.
  
     Draws circle with radius `circleRadius` and color `circleColor`. 
-    If `strokeColor`, draws stroke with width of `strokeWidth`. Circle
+    If `circleStrokeColor`, draws stroke with width of `circleStrokeWidth`. Circle
     wedge starts at 0.0 and ends at `angle`. The `interval` determines
     how long the circle counts down for. The interval is based on `baseDate`,
     or the current date.
@@ -45,9 +45,9 @@ public class CircularCountdown: UIView {
     /// Size of the circle's radius `r`. Frame size will be the diameter `d` where `d = 2r`.
     @IBInspectable var circleRadius: CGFloat = 0.0
     /// Optional stroke color for the progress circle
-    @IBInspectable var strokeColor: UIColor?
+    @IBInspectable var circleStrokeColor: UIColor?
     /// Defaults to 0.0 (no stroke)
-    @IBInspectable var strokeWidth: CGFloat = 0.0
+    @IBInspectable var circleStrokeWidth: CGFloat = 0.0
     /// The angle to set the indicator's progress at (you probably won't touch this 98% of the time)
     @IBInspectable var angle: CGFloat = 0.0
     /// Length of cycle represented by this indicator
@@ -104,8 +104,8 @@ public class CircularCountdown: UIView {
         
         circleLayer.path = drawCirclePath(angle)
         circleLayer.fillColor = circleColor?.CGColor
-        circleLayer.strokeColor = strokeColor?.CGColor
-        circleLayer.lineWidth = strokeWidth
+        circleLayer.strokeColor = circleStrokeColor?.CGColor
+        circleLayer.lineWidth = circleStrokeWidth
         
         layer.addSublayer(circleLayer)
     }
