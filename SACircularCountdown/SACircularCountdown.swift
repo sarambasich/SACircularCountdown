@@ -53,10 +53,6 @@ public class CircularCountdown: UIView {
     /// Length of cycle represented by this indicator
     @IBInspectable var interval: CGFloat = 30.0
     
-    /// Base date to calculate timer's interval; optional and defaults to
-    /// `NSDate()` when needed
-    var baseDate: NSDate?
-    
     /// Display link
     private var displayLink: CADisplayLink?
     /// The progress circle's path
@@ -118,7 +114,7 @@ public class CircularCountdown: UIView {
     private func drawCirclePath(angle: CGFloat) -> CGPath {
         let center = CGPoint(x: bounds.size.width / 2.0, y: bounds.size.height / 2.0)
         circlePath.removeAllPoints()
-        circlePath.addArcWithCenter(center, radius: circleRadius, startAngle: 3.0*π/2.0, endAngle: angle.radians, clockwise: false)
+        circlePath.addArcWithCenter(center, radius: circleRadius, startAngle: 3.0*π/2.0, endAngle: angle.radians - π/2.0, clockwise: false)
         circlePath.addLineToPoint(center)
         circlePath.closePath()
         return circlePath.CGPath
@@ -146,7 +142,7 @@ public class CircularCountdown: UIView {
         - parameter displayLink: The display link object.
     */
     @objc func update(displayLink: CADisplayLink) {
-        let ofInterval: NSTimeInterval = fabs(((self.baseDate ?? NSDate()).timeIntervalSince1970) % NSTimeInterval(self.interval))
+        let ofInterval: NSTimeInterval = fabs(NSDate().timeIntervalSince1970 % NSTimeInterval(self.interval))
         let progress = CGFloat(ofInterval) / CGFloat(self.interval)
         self.drawCircleLayer(360.0 * progress)
     }
