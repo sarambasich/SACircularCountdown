@@ -124,7 +124,7 @@ public class CircularCountdown: UIView {
         `CADisplayLink` support
     */
     private func configureDisplayLink() {
-        displayLink = CADisplayLink(target: self, selector: "update:")
+        displayLink = CADisplayLink(target: self, selector: #selector(CircularCountdown.update(_:)))
         displayLink?.addToRunLoop(NSRunLoop.currentRunLoop(), forMode: NSRunLoopCommonModes)
     }
     
