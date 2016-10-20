@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8C9CB791DB08F6E00B8F4DC /* SACircularCountdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F9A5581C2F03CB00EE7C24 /* SACircularCountdown.swift */; };
 		F8F9A5391C2F039200EE7C24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F9A5381C2F039200EE7C24 /* AppDelegate.swift */; };
 		F8F9A53B1C2F039200EE7C24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F9A53A1C2F039200EE7C24 /* ViewController.swift */; };
 		F8F9A53E1C2F039200EE7C24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8F9A53C1C2F039200EE7C24 /* Main.storyboard */; };
 		F8F9A5401C2F039200EE7C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8F9A53F1C2F039200EE7C24 /* Assets.xcassets */; };
 		F8F9A5431C2F039200EE7C24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8F9A5411C2F039200EE7C24 /* LaunchScreen.storyboard */; };
 		F8F9A54E1C2F039200EE7C24 /* SACircularCountdownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F9A54D1C2F039200EE7C24 /* SACircularCountdownTests.swift */; };
-		F8F9A5591C2F03CB00EE7C24 /* SACircularCountdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F9A5581C2F03CB00EE7C24 /* SACircularCountdown.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,10 +149,15 @@
 				TargetAttributes = {
 					F8F9A5341C2F039200EE7C24 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 9MU89722E9;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 					F8F9A5481C2F039200EE7C24 = {
 						CreatedOnToolsVersion = 7.2;
-						TestTargetID = F8F9A5341C2F039200EE7C24;
+						DevelopmentTeam = 9MU89722E9;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -201,7 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8F9A53B1C2F039200EE7C24 /* ViewController.swift in Sources */,
-				F8F9A5591C2F03CB00EE7C24 /* SACircularCountdown.swift in Sources */,
+				F8C9CB791DB08F6E00B8F4DC /* SACircularCountdown.swift in Sources */,
 				F8F9A5391C2F039200EE7C24 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,10 +336,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9MU89722E9;
 				INFOPLIST_FILE = SACircularCountdown/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sarambasich.SACircularCountdown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -342,34 +350,39 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9MU89722E9;
 				INFOPLIST_FILE = SACircularCountdown/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sarambasich.SACircularCountdown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		F8F9A5561C2F039200EE7C24 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9MU89722E9;
 				INFOPLIST_FILE = SACircularCountdownTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sarambasich.SACircularCountdownTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SACircularCountdown.app/SACircularCountdown";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		F8F9A5571C2F039200EE7C24 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9MU89722E9;
 				INFOPLIST_FILE = SACircularCountdownTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sarambasich.SACircularCountdownTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SACircularCountdown.app/SACircularCountdown";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
