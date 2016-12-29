@@ -72,15 +72,6 @@ open class CircularCountdown: UIView {
         
         initialize()
     }
-    
-    open override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        
-        drawCircleLayer(angle)
-        circleLayer.fillColor = circleColor?.cgColor
-        circleLayer.strokeColor = circleStrokeColor?.cgColor
-        circleLayer.lineWidth = circleStrokeWidth
-    }
 }
 
 private extension CircularCountdown {
@@ -99,6 +90,9 @@ private extension CircularCountdown {
          - parameter clockwise: Whether the angle is drawn clockwise. default=true
      */
     func drawCircleLayer(_ angle: CGFloat, clockwise: Bool = true) {
+        circleLayer.fillColor = circleColor?.cgColor
+        circleLayer.strokeColor = circleStrokeColor?.cgColor
+        circleLayer.lineWidth = circleStrokeWidth
         circleLayer.path = drawCirclePath(angle)
 
         if layer.sublayers?.filter({ $0 == circleLayer }).count ?? 0 <= 0 {
