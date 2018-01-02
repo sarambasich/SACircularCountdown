@@ -4,7 +4,7 @@
 //
 //  Created by Stefan Arambasich on 12/26/2015.
 //
-//  Copyright (c) 2015-2018 Stefan Arambasich. All rights reserved.
+//  Copyright (c) 2015-2016 Stefan Arambasich. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -26,7 +26,7 @@
 
 import UIKit
 
-private let π = CGFloat(Double.pi)
+private let π = CGFloat(M_PI)
 
 /**
     Circular-wedge shaped countdown widget. `IBDesignable` compatible.
@@ -151,7 +151,7 @@ private extension CGFloat {
 
     /// Converts the receiver, assumed to be in degrees, to radians.
     var radians: CGFloat {
-        return self * π / 180.0
+        return self * CGFloat(M_PI) / 180.0
     }
 }
 

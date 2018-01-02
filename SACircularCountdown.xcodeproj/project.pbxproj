@@ -7,16 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F8C9CB791DB08F6E00B8F4DC /* SACircularCountdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F9A5581C2F03CB00EE7C24 /* SACircularCountdown.swift */; };
-		F8F9A5391C2F039200EE7C24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F9A5381C2F039200EE7C24 /* AppDelegate.swift */; };
-		F8F9A53B1C2F039200EE7C24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F9A53A1C2F039200EE7C24 /* ViewController.swift */; };
-		F8F9A53E1C2F039200EE7C24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8F9A53C1C2F039200EE7C24 /* Main.storyboard */; };
-		F8F9A5401C2F039200EE7C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8F9A53F1C2F039200EE7C24 /* Assets.xcassets */; };
-		F8F9A5431C2F039200EE7C24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8F9A5411C2F039200EE7C24 /* LaunchScreen.storyboard */; };
+		F802A1611FFB216C000078B7 /* SACircularCountdown.h in Headers */ = {isa = PBXBuildFile; fileRef = F802A15F1FFB216C000078B7 /* SACircularCountdown.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F802A1751FFB22A2000078B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802A16B1FFB22A2000078B7 /* ViewController.swift */; };
+		F802A1771FFB22A2000078B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F802A16D1FFB22A2000078B7 /* Assets.xcassets */; };
+		F802A1781FFB22A2000078B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F802A16F1FFB22A2000078B7 /* LaunchScreen.storyboard */; };
+		F802A1791FFB22A2000078B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F802A1711FFB22A2000078B7 /* Main.storyboard */; };
+		F802A17A1FFB22A2000078B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802A1731FFB22A2000078B7 /* AppDelegate.swift */; };
+		F802A17B1FFB22A2000078B7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F802A1741FFB22A2000078B7 /* Info.plist */; };
+		F802A17D1FFB22CA000078B7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8F9A54F1C2F039200EE7C24 /* Info.plist */; };
+		F802A17F1FFB230A000078B7 /* SACircularCountdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802A17E1FFB230A000078B7 /* SACircularCountdown.swift */; };
+		F802A1801FFB2333000078B7 /* SACircularCountdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F802A15D1FFB216C000078B7 /* SACircularCountdown.framework */; };
+		F802A1811FFB2333000078B7 /* SACircularCountdown.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F802A15D1FFB216C000078B7 /* SACircularCountdown.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F8F9A54E1C2F039200EE7C24 /* SACircularCountdownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F9A54D1C2F039200EE7C24 /* SACircularCountdownTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F802A1821FFB2333000078B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8F9A52D1C2F039200EE7C24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F802A15C1FFB216C000078B7;
+			remoteInfo = SACircularCountdown;
+		};
 		F8F9A54A1C2F039200EE7C24 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F8F9A52D1C2F039200EE7C24 /* Project object */;
@@ -26,25 +38,50 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F802A1841FFB2333000078B7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F802A1811FFB2333000078B7 /* SACircularCountdown.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F802A15D1FFB216C000078B7 /* SACircularCountdown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SACircularCountdown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F802A15F1FFB216C000078B7 /* SACircularCountdown.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SACircularCountdown.h; sourceTree = "<group>"; };
+		F802A1601FFB216C000078B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F802A16B1FFB22A2000078B7 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F802A16D1FFB22A2000078B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F802A1701FFB22A2000078B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F802A1721FFB22A2000078B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F802A1731FFB22A2000078B7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F802A1741FFB22A2000078B7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F802A17E1FFB230A000078B7 /* SACircularCountdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SACircularCountdown.swift; sourceTree = "<group>"; };
 		F8F9A5351C2F039200EE7C24 /* SACircularCountdownDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SACircularCountdownDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8F9A5381C2F039200EE7C24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F8F9A53A1C2F039200EE7C24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F8F9A53D1C2F039200EE7C24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F8F9A53F1C2F039200EE7C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F8F9A5421C2F039200EE7C24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F8F9A5441C2F039200EE7C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8F9A5491C2F039200EE7C24 /* SACircularCountdownTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SACircularCountdownTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F9A54D1C2F039200EE7C24 /* SACircularCountdownTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SACircularCountdownTests.swift; sourceTree = "<group>"; };
 		F8F9A54F1C2F039200EE7C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8F9A5581C2F03CB00EE7C24 /* SACircularCountdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SACircularCountdown.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F802A1591FFB216C000078B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8F9A5321C2F039200EE7C24 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F802A1801FFB2333000078B7 /* SACircularCountdown.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,10 +95,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F802A15E1FFB216C000078B7 /* SACircularCountdown */ = {
+			isa = PBXGroup;
+			children = (
+				F802A17E1FFB230A000078B7 /* SACircularCountdown.swift */,
+				F802A15F1FFB216C000078B7 /* SACircularCountdown.h */,
+				F802A1601FFB216C000078B7 /* Info.plist */,
+			);
+			path = SACircularCountdown;
+			sourceTree = "<group>";
+		};
+		F802A16A1FFB22A2000078B7 /* SACircularCountdownDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F802A16B1FFB22A2000078B7 /* ViewController.swift */,
+				F802A16D1FFB22A2000078B7 /* Assets.xcassets */,
+				F802A16F1FFB22A2000078B7 /* LaunchScreen.storyboard */,
+				F802A1711FFB22A2000078B7 /* Main.storyboard */,
+				F802A1731FFB22A2000078B7 /* AppDelegate.swift */,
+				F802A1741FFB22A2000078B7 /* Info.plist */,
+			);
+			path = SACircularCountdownDemo;
+			sourceTree = "<group>";
+		};
 		F8F9A52C1C2F039200EE7C24 = {
 			isa = PBXGroup;
 			children = (
-				F8F9A5371C2F039200EE7C24 /* SACircularCountdown */,
+				F802A15E1FFB216C000078B7 /* SACircularCountdown */,
+				F802A16A1FFB22A2000078B7 /* SACircularCountdownDemo */,
 				F8F9A54C1C2F039200EE7C24 /* SACircularCountdownTests */,
 				F8F9A5361C2F039200EE7C24 /* Products */,
 			);
@@ -72,22 +133,9 @@
 			children = (
 				F8F9A5351C2F039200EE7C24 /* SACircularCountdownDemo.app */,
 				F8F9A5491C2F039200EE7C24 /* SACircularCountdownTests.xctest */,
+				F802A15D1FFB216C000078B7 /* SACircularCountdown.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		F8F9A5371C2F039200EE7C24 /* SACircularCountdown */ = {
-			isa = PBXGroup;
-			children = (
-				F8F9A5381C2F039200EE7C24 /* AppDelegate.swift */,
-				F8F9A53A1C2F039200EE7C24 /* ViewController.swift */,
-				F8F9A53C1C2F039200EE7C24 /* Main.storyboard */,
-				F8F9A53F1C2F039200EE7C24 /* Assets.xcassets */,
-				F8F9A5411C2F039200EE7C24 /* LaunchScreen.storyboard */,
-				F8F9A5441C2F039200EE7C24 /* Info.plist */,
-				F8F9A5581C2F03CB00EE7C24 /* SACircularCountdown.swift */,
-			);
-			path = SACircularCountdown;
 			sourceTree = "<group>";
 		};
 		F8F9A54C1C2F039200EE7C24 /* SACircularCountdownTests */ = {
@@ -101,7 +149,36 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		F802A15A1FFB216C000078B7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F802A1611FFB216C000078B7 /* SACircularCountdown.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		F802A15C1FFB216C000078B7 /* SACircularCountdown */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F802A1681FFB216C000078B7 /* Build configuration list for PBXNativeTarget "SACircularCountdown" */;
+			buildPhases = (
+				F802A1581FFB216C000078B7 /* Sources */,
+				F802A1591FFB216C000078B7 /* Frameworks */,
+				F802A15A1FFB216C000078B7 /* Headers */,
+				F802A15B1FFB216C000078B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SACircularCountdown;
+			productName = SACircularCountdown;
+			productReference = F802A15D1FFB216C000078B7 /* SACircularCountdown.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		F8F9A5341C2F039200EE7C24 /* SACircularCountdownDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8F9A5521C2F039200EE7C24 /* Build configuration list for PBXNativeTarget "SACircularCountdownDemo" */;
@@ -109,10 +186,12 @@
 				F8F9A5311C2F039200EE7C24 /* Sources */,
 				F8F9A5321C2F039200EE7C24 /* Frameworks */,
 				F8F9A5331C2F039200EE7C24 /* Resources */,
+				F802A1841FFB2333000078B7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F802A1831FFB2333000078B7 /* PBXTargetDependency */,
 			);
 			name = SACircularCountdownDemo;
 			productName = SACircularCountdown;
@@ -147,6 +226,12 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Stefan Arambasich";
 				TargetAttributes = {
+					F802A15C1FFB216C000078B7 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = 9MU89722E9;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
 					F8F9A5341C2F039200EE7C24 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 9MU89722E9;
@@ -176,18 +261,27 @@
 			targets = (
 				F8F9A5341C2F039200EE7C24 /* SACircularCountdownDemo */,
 				F8F9A5481C2F039200EE7C24 /* SACircularCountdownTests */,
+				F802A15C1FFB216C000078B7 /* SACircularCountdown */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F802A15B1FFB216C000078B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8F9A5331C2F039200EE7C24 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8F9A5431C2F039200EE7C24 /* LaunchScreen.storyboard in Resources */,
-				F8F9A5401C2F039200EE7C24 /* Assets.xcassets in Resources */,
-				F8F9A53E1C2F039200EE7C24 /* Main.storyboard in Resources */,
+				F802A1771FFB22A2000078B7 /* Assets.xcassets in Resources */,
+				F802A1791FFB22A2000078B7 /* Main.storyboard in Resources */,
+				F802A1781FFB22A2000078B7 /* LaunchScreen.storyboard in Resources */,
+				F802A17B1FFB22A2000078B7 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,19 +289,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F802A17D1FFB22CA000078B7 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F802A1581FFB216C000078B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F802A17F1FFB230A000078B7 /* SACircularCountdown.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8F9A5311C2F039200EE7C24 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8F9A53B1C2F039200EE7C24 /* ViewController.swift in Sources */,
-				F8C9CB791DB08F6E00B8F4DC /* SACircularCountdown.swift in Sources */,
-				F8F9A5391C2F039200EE7C24 /* AppDelegate.swift in Sources */,
+				F802A17A1FFB22A2000078B7 /* AppDelegate.swift in Sources */,
+				F802A1751FFB22A2000078B7 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +324,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F802A1831FFB2333000078B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F802A15C1FFB216C000078B7 /* SACircularCountdown */;
+			targetProxy = F802A1821FFB2333000078B7 /* PBXContainerItemProxy */;
+		};
 		F8F9A54B1C2F039200EE7C24 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F8F9A5341C2F039200EE7C24 /* SACircularCountdownDemo */;
@@ -230,25 +337,108 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F8F9A53C1C2F039200EE7C24 /* Main.storyboard */ = {
+		F802A16F1FFB22A2000078B7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F8F9A53D1C2F039200EE7C24 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F8F9A5411C2F039200EE7C24 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F8F9A5421C2F039200EE7C24 /* Base */,
+				F802A1701FFB22A2000078B7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F802A1711FFB22A2000078B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F802A1721FFB22A2000078B7 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F802A1661FFB216C000078B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9MU89722E9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SACircularCountdown/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sarambasich.SACircularCountdown;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F802A1671FFB216C000078B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9MU89722E9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SACircularCountdown/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sarambasich.SACircularCountdown;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		F8F9A5501C2F039200EE7C24 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -335,28 +525,38 @@
 		F8F9A5531C2F039200EE7C24 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9MU89722E9;
 				INFOPLIST_FILE = SACircularCountdown/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sarambasich.SACircularCountdown;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sarambasich.SACircularCountdownDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		F8F9A5541C2F039200EE7C24 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9MU89722E9;
 				INFOPLIST_FILE = SACircularCountdown/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sarambasich.SACircularCountdown;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sarambasich.SACircularCountdownDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -389,6 +589,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F802A1681FFB216C000078B7 /* Build configuration list for PBXNativeTarget "SACircularCountdown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F802A1661FFB216C000078B7 /* Debug */,
+				F802A1671FFB216C000078B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F8F9A5301C2F039200EE7C24 /* Build configuration list for PBXProject "SACircularCountdown" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

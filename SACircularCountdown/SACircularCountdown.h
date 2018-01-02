@@ -1,10 +1,10 @@
 //
-//  ViewController.swift
+//  SACircularCountdown.h
 //  SACircularCountdown
 //
-//  Created by Stefan Arambasich on 12/26/2015.
+//  Created by Stefan Arambasich on 1/1/18.
 //
-//  Copyright (c) 2015-2016 Stefan Arambasich. All rights reserved.
+//  Copyright (c) 2015-2018 Stefan Arambasich. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -24,20 +24,14 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import UIKit
+#import <UIKit/UIKit.h>
 
-class ViewController: UIViewController {
+//! Project version number for SACircularCountdown.
+FOUNDATION_EXPORT double SACircularCountdownVersionNumber;
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+//! Project version string for SACircularCountdown.
+FOUNDATION_EXPORT const unsigned char SACircularCountdownVersionString[];
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+// In this header, you should import all the public headers of your framework using statements like #import <SACircularCountdown/PublicHeader.h>
 
-
-}
 
