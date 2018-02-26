@@ -124,6 +124,7 @@
 				F802A15E1FFB216C000078B7 /* SACircularCountdown */,
 				F802A16A1FFB22A2000078B7 /* SACircularCountdownDemo */,
 				F8F9A54C1C2F039200EE7C24 /* SACircularCountdownTests */,
+				F85CB7582043D09C008B9544 /* SACircularCountdown */,
 				F8F9A5361C2F039200EE7C24 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -222,7 +223,7 @@
 		F8F9A52D1C2F039200EE7C24 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Stefan Arambasich";
 				TargetAttributes = {
@@ -259,6 +260,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				F85CB7562043D09C008B9544 /* SACircularCountdown */,
+				F8F9A5481C2F039200EE7C24 /* SACircularCountdownTests */,
 				F8F9A5341C2F039200EE7C24 /* SACircularCountdownDemo */,
 				F8F9A5481C2F039200EE7C24 /* SACircularCountdownTests */,
 				F802A15C1FFB216C000078B7 /* SACircularCountdown */,
