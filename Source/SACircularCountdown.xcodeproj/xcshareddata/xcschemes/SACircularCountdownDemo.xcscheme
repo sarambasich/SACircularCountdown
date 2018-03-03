@@ -29,26 +29,6 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F8F9A5481C2F039200EE7C24"
-               BuildableName = "SACircularCountdownTests.xctest"
-               BlueprintName = "SACircularCountdownTests"
-               ReferencedContainer = "container:SACircularCountdown.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F8F9A5481C2F039200EE7C24"
-               BuildableName = "SACircularCountdownTests.xctest"
-               BlueprintName = "SACircularCountdownTests"
-               ReferencedContainer = "container:SACircularCountdown.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <AdditionalOptions>
       </AdditionalOptions>
