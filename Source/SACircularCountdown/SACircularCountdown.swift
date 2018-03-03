@@ -37,29 +37,28 @@ private let π = Double.pi
 /// wedge starts at 0.0 and ends at `angle`. The `interval` determines
 /// how long the circle counts down for. The interval is based on `baseDate`,
 /// the current date by default.
-@IBDesignable
-public class CircularCountdown: UIView {
+@IBDesignable public class CircularCountdown: UIView {
 
-    /// What color to fill the progress circle
+    /// What color to fill the progress circle.
     @IBInspectable var circleColor: UIColor?
 
     /// Size of the circle's radius `r`. Frame size will be the diameter `d` where `d = 2r`.
     @IBInspectable var circleRadius: CGFloat = 0.0
 
-    /// Optional stroke color for the progress circle
+    /// Optional stroke color for the progress circle.
     @IBInspectable var strokeColor: UIColor?
 
-    /// Defaults to 0.0 (no stroke)
+    /// Defaults to 0.0 (no stroke).
     @IBInspectable var strokeWidth: CGFloat = 0.0
 
-    /// The angle to set the indicator's progress at (you probably won't touch this 98% of the time)
+    /// The angle in degrees to set the indicator's progress at.
     @IBInspectable var angle: CGFloat = 0.0
 
-    /// Length of cycle represented by this indicator
+    /// Length of cycle represented by this indicator.
     @IBInspectable var interval: CGFloat = 30.0
     
     /// Base date to calculate timer's interval; optional and defaults to
-    /// `Date()` when needed
+    /// `Date()` when needed.
     var baseDate: Date?
     
     /// Display link
@@ -71,7 +70,15 @@ public class CircularCountdown: UIView {
     /// The progress circle's shape layer
     private let circleLayer = CAShapeLayer()
 
-    // MARK: - Methods
+    // MARK: - Initialization
+
+    init(displayLink: CADisplayLink) {
+        self.displayLink = displayLink
+
+        super.init(frame: .zero)
+
+        initialize()
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -84,16 +91,22 @@ public class CircularCountdown: UIView {
         
         initialize()
     }
+
+    // MARK: Public methods
     
     public override func draw(_ rect: CGRect) {
         super.draw(rect)
-        
+
+        if displayLink == nil {
+            displayLink = CADisplayLink(target: self, selector: #selector(update(displayLink:)))
+            startDisplayLink()
+        }
         drawCircleLayer(angle: angle)
     }
 
     /// Set up the countdown.
     private func initialize() {
-        configureDisplayLink()
+
     }
 
     /// Removes old layers. Fills in the circle layer with stroke and fill colors.
@@ -135,13 +148,12 @@ public class CircularCountdown: UIView {
     
     // MARK: - `CADisplayLink` support
 
-    /// Instantiates a display link and add it to the current run loop.
-    private func configureDisplayLink() {
-        displayLink = CADisplayLink(target: self, selector: #selector(update(displayLink:)))
+    /// Add the display link to the current run loop.
+    private func startDisplayLink() {
         displayLink?.add(to: .current, forMode: .defaultRunLoopMode)
     }
 
-    /// Releases `CADisplayLink` resources.
+    /// Removes from the run loop and releases `CADisplayLink`.
     private func cleanUpDisplayLink() {
         displayLink?.remove(from: .current, forMode: .defaultRunLoopMode)
         displayLink = nil
@@ -151,6 +163,8 @@ public class CircularCountdown: UIView {
     ///
     /// - Parameter displayLink: The display link object.
     @objc func update(displayLink: CADisplayLink) {
+        guard displayLink === self.displayLink else { return }
+
         let unicodeTimestamp = (baseDate ?? Date()).timeIntervalSince1970
         let ofInterval = TimeInterval(
             fabs(
