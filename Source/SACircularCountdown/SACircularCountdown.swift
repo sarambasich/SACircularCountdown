@@ -28,38 +28,54 @@ import UIKit
 
 private let π = CGFloat(Double.pi)
 
-/**
-    Circular-wedge shaped countdown widget. `IBDesignable` compatible.
- 
-    Draws circle with radius `circleRadius` and color `circleColor`. 
-    If `circleStrokeColor`, draws stroke with width of `circleStrokeWidth`. Circle
-    wedge starts at 0.0 and ends at `angle`. The `interval` determines
-    how long the circle counts down for. The interval is based on `baseDate`,
-    or the current date.
-*/
-@IBDesignable
-open class CircularCountdown: UIView {
 
-    /// Fill color of progress circle
+/// Circular-wedge shaped countdown widget.
+///
+/// Draws circle with radius `circleRadius` and color `circleColor`.
+/// If `strokeColor`, draws stroke with width of `strokeWidth`. Circle
+/// wedge starts at 0.0 and ends at `angle`. The `interval` determines
+/// how long the circle counts down for. The interval is based on `baseDate`,
+/// the current date by default.
+@IBDesignable public class CircularCountdown: UIView {
+
+    /// What color to fill the progress circle.
     @IBInspectable var circleColor: UIColor?
     /// Size of the circle's radius `r`
     @IBInspectable var circleRadius: CGFloat = 0.0
-    /// Optional stroke color for the progress circle
-    @IBInspectable var circleStrokeColor: UIColor?
-    /// Stroke width for indicator circle
-    @IBInspectable var circleStrokeWidth: CGFloat = 0.0
-    /// The angle, in radians, of the indicator's progress
+
+    /// Optional stroke color for the progress circle.
+    @IBInspectable var strokeColor: UIColor?
+
+    /// Defaults to 0.0 (no stroke).
+    @IBInspectable var strokeWidth: CGFloat = 0.0
+
+    /// The angle in degrees to set the indicator's progress at.
     @IBInspectable var angle: CGFloat = 0.0
-    /// Length of time represented by this indicator
-    @IBInspectable var interval: TimeInterval = 30.0
+
+    /// Length of cycle represented by this indicator.
+    @IBInspectable var interval: CGFloat = 30.0
     
-    /// Display link used to synchronize drawing with display refresh
-    var displayLink: CADisplayLink?
+    /// Base date to calculate timer's interval; optional and defaults to
+    /// `Date()` when needed.
+    var baseDate: Date?
+    
+    /// Display link
+    private var displayLink: CADisplayLink?
 
     /// The progress circle's path
     fileprivate let circlePath = UIBezierPath()
     /// The progress circle's shape layer
-    fileprivate let circleLayer = CAShapeLayer()
+    private let circleLayer = CAShapeLayer()
+
+    // MARK: - Initialization
+
+    init(displayLink: CADisplayLink) {
+        self.displayLink = displayLink
+
+        super.init(frame: .zero)
+
+        initialize()
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -72,15 +88,22 @@ open class CircularCountdown: UIView {
         
         initialize()
     }
-}
 
-private extension CircularCountdown {
+    // MARK: Public methods
     
-    /**
-        Set up the countdown.
-    */
-    func initialize() {
-        configureDisplayLink()
+    public override func draw(_ rect: CGRect) {
+        super.draw(rect)
+
+        if displayLink == nil {
+            displayLink = CADisplayLink(target: self, selector: #selector(update(displayLink:)))
+            startDisplayLink()
+        }
+        drawCircleLayer(angle: angle)
+    }
+
+    /// Set up the countdown.
+    private func initialize() {
+
     }
     
     /**
@@ -115,34 +138,34 @@ private extension CircularCountdown {
         return circlePath.cgPath
     }
     
-    /**
-        `CADisplayLink` support
-    */
-    func configureDisplayLink() {
-        guard displayLink == nil else { return }
-        displayLink = CADisplayLink(target: self, selector: #selector(CircularCountdown.update(_:)))
-        displayLink?.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
+    // MARK: - `CADisplayLink` support
+
+    /// Add the display link to the current run loop.
+    private func startDisplayLink() {
+        displayLink?.add(to: .current, forMode: .defaultRunLoopMode)
     }
-    
-    /**
-        Releases `CADisplayLink` resources.
-    */
-    func cleanUpDisplayLink() {
-        guard displayLink != nil else { return }
-        displayLink?.remove(from: RunLoop.current, forMode: RunLoopMode.defaultRunLoopMode)
+
+    /// Removes from the run loop and releases `CADisplayLink`.
+    private func cleanUpDisplayLink() {
+        displayLink?.remove(from: .current, forMode: .defaultRunLoopMode)
         displayLink = nil
     }
-    
-    /**
-        Callback for `CADisplayLink` to calculate time interval for countdonw.
-     
-        - parameter displayLink: The display link object.
-    */
-    @objc func update(_ _: CADisplayLink) {
-        let ofInterval: TimeInterval = fabs(NSDate()
-            .timeIntervalSince1970.truncatingRemainder(dividingBy: TimeInterval(interval))),
-        progress = CGFloat(ofInterval) / CGFloat(interval)
-        drawCircleLayer(360.0 * progress)
+
+    /// Callback for `CADisplayLink` to calculate time interval for countdonw.
+    ///
+    /// - Parameter displayLink: The display link object.
+    @objc func update(displayLink: CADisplayLink) {
+        guard displayLink === self.displayLink else { return }
+
+        let unicodeTimestamp = (baseDate ?? Date()).timeIntervalSince1970
+        let ofInterval = TimeInterval(
+            fabs(
+                unicodeTimestamp
+                    .truncatingRemainder(dividingBy: TimeInterval(interval))
+            )
+        )
+        let progress = CGFloat(ofInterval) / CGFloat(interval)
+        drawCircleLayer(angle: 360.0 * progress)
     }
 }
 
