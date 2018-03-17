@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F8141B8A2043D56D00406155 /* SACircularCountdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85CB7502043D00B008B9544 /* SACircularCountdown.swift */; };
+		F8141B8A2043D56D00406155 /* CircularCountdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85CB7502043D00B008B9544 /* CircularCountdown.swift */; };
 		F85CB7692043D09C008B9544 /* SACircularCountdown.h in Headers */ = {isa = PBXBuildFile; fileRef = F85CB7592043D09C008B9544 /* SACircularCountdown.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F85CB76C2043D09C008B9544 /* SACircularCountdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F85CB7572043D09C008B9544 /* SACircularCountdown.framework */; };
 		F85CB76D2043D09C008B9544 /* SACircularCountdown.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F85CB7572043D09C008B9544 /* SACircularCountdown.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -51,7 +51,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F85CB7502043D00B008B9544 /* SACircularCountdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SACircularCountdown.swift; sourceTree = "<group>"; };
+		F85CB7502043D00B008B9544 /* CircularCountdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularCountdown.swift; path = ../CircularCountdown.swift; sourceTree = "<group>"; };
 		F85CB7572043D09C008B9544 /* SACircularCountdown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SACircularCountdown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F85CB7592043D09C008B9544 /* SACircularCountdown.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SACircularCountdown.h; sourceTree = "<group>"; };
 		F85CB75A2043D09C008B9544 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		F85CB74F2043D00B008B9544 /* SACircularCountdown */ = {
 			isa = PBXGroup;
 			children = (
-				F85CB7502043D00B008B9544 /* SACircularCountdown.swift */,
+				F85CB7502043D00B008B9544 /* CircularCountdown.swift */,
 			);
 			path = SACircularCountdown;
 			sourceTree = SOURCE_ROOT;
@@ -296,7 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8141B8A2043D56D00406155 /* SACircularCountdown.swift in Sources */,
+				F8141B8A2043D56D00406155 /* CircularCountdown.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
