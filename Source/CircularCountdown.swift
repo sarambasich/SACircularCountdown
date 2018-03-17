@@ -1,5 +1,5 @@
 //
-//  SACircularCountdown.swift
+//  CircularCountdown.swift
 //  SACircularCountdown
 //
 //  Created by Stefan Arambasich on 12/26/2015.
@@ -36,28 +36,35 @@ private let π = CGFloat(Double.pi)
 /// wedge starts at 0.0 and ends at `angle`. The `interval` determines
 /// how long the circle counts down for. The interval is based on `baseDate`,
 /// the current date by default.
-@IBDesignable public class CircularCountdown: UIView {
+@IBDesignable open class CircularCountdown: UIView {
+
+    // MARK: -
+    // MARK: Public properties
 
     /// What color to fill the progress circle.
-    @IBInspectable var circleColor: UIColor?
-    /// Size of the circle's radius `r`
-    @IBInspectable var circleRadius: CGFloat = 0.0
+    @IBInspectable open var circleColor: UIColor?
+
+    /// Size of the circle's radius `r`. Frame size will be the diameter `d` where `d = 2r`.
+    @IBInspectable open var circleRadius: CGFloat = 0.0
 
     /// Optional stroke color for the progress circle.
-    @IBInspectable var strokeColor: UIColor?
+    @IBInspectable open var strokeColor: UIColor?
 
     /// Defaults to 0.0 (no stroke).
-    @IBInspectable var strokeWidth: CGFloat = 0.0
+    @IBInspectable open var strokeWidth: CGFloat = 0.0
 
     /// The angle in degrees to set the indicator's progress at.
-    @IBInspectable var angle: CGFloat = 0.0
+    @IBInspectable open var angle: CGFloat = 0.0
 
     /// Length of cycle represented by this indicator.
-    @IBInspectable var interval: CGFloat = 30.0
-    
+    @IBInspectable open var interval: CGFloat = 30.0
+
     /// Base date to calculate timer's interval; optional and defaults to
     /// `Date()` when needed.
-    var baseDate: Date?
+    open var baseDate: Date?
+
+    // MARK: -
+    // MARK: Private properties
     
     /// Display link
     private var displayLink: CADisplayLink?
@@ -69,29 +76,14 @@ private let π = CGFloat(Double.pi)
 
     // MARK: - Initialization
 
-    init(displayLink: CADisplayLink) {
-        self.displayLink = displayLink
-
-        super.init(frame: .zero)
-
-        initialize()
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        initialize()
-    }
-    
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        initialize()
     }
 
-    // MARK: Public methods
+    // MARK: -
+    // MARK: Overrides
     
-    public override func draw(_ rect: CGRect) {
+    open override func draw(_ rect: CGRect) {
         super.draw(rect)
 
         if displayLink == nil {
@@ -101,9 +93,8 @@ private let π = CGFloat(Double.pi)
         drawCircleLayer(angle: angle)
     }
 
-    /// Set up the countdown.
-    private func initialize() {
-
+    deinit {
+        cleanUpDisplayLink()
     }
     
     /**
@@ -118,17 +109,28 @@ private let π = CGFloat(Double.pi)
         circleLayer.lineWidth = circleStrokeWidth
         circleLayer.path = drawCirclePath(angle)
 
-        if layer.sublayers?.filter({ $0 == circleLayer }).count ?? 0 <= 0 {
-            layer.addSublayer(circleLayer)
+}
+
+private extension CircularCountdown {
+
+    // MARK: -
+    // MARK: Drawing
+
+    /// Removes old layers. Fills in the circle layer with stroke and fill colors.
+    ///
+    /// - Parameters:
+    ///   - angle: Angle in degrees.
+    func drawCircleLayer(angle: CGFloat) {
+        layer.sublayers?.forEach {
+            $0.removeFromSuperlayer()
         }
     }
-    
-    /**
-        Draws the path for the circle wedge we want to display.
-        
-        - parameter angle: The angle to draw the circle (wedge) until in degrees.
-    */
-    func drawCirclePath(_ angle: CGFloat) -> CGPath {
+
+    /// Draws the path for the circle wedge we want to display.
+    ///
+    /// - Parameter angle: The angle to draw the circle (wedge) until in degrees.
+    /// - Returns: The path itself.
+    func drawCirclePath(angle: CGFloat) -> CGPath {
         let center = CGPoint(x: bounds.size.width / 2.0, y: bounds.size.height / 2.0)
         circlePath.removeAllPoints()
         circlePath.addArc(withCenter: center, radius: circleRadius, startAngle: 3.0*π/2.0,
@@ -138,20 +140,21 @@ private let π = CGFloat(Double.pi)
         return circlePath.cgPath
     }
     
-    // MARK: - `CADisplayLink` support
+    // MARK: -
+    // MARK: `CADisplayLink` support
 
     /// Add the display link to the current run loop.
-    private func startDisplayLink() {
+    func startDisplayLink() {
         displayLink?.add(to: .current, forMode: .defaultRunLoopMode)
     }
 
     /// Removes from the run loop and releases `CADisplayLink`.
-    private func cleanUpDisplayLink() {
-        displayLink?.remove(from: .current, forMode: .defaultRunLoopMode)
+    func cleanUpDisplayLink() {
+        displayLink?.invalidate()
         displayLink = nil
     }
 
-    /// Callback for `CADisplayLink` to calculate time interval for countdonw.
+    /// Callback for `CADisplayLink` to calculate time interval for countdown.
     ///
     /// - Parameter displayLink: The display link object.
     @objc func update(displayLink: CADisplayLink) {
@@ -167,8 +170,12 @@ private let π = CGFloat(Double.pi)
         let progress = CGFloat(ofInterval) / CGFloat(interval)
         drawCircleLayer(angle: 360.0 * progress)
     }
+
 }
 
+
+// MARK: -
+// MARK: Extension for angle conversion
 
 private extension CGFloat {
 
@@ -176,5 +183,6 @@ private extension CGFloat {
     var radians: CGFloat {
         return self * π / 180.0
     }
+
 }
 

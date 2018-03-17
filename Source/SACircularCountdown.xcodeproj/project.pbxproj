@@ -7,17 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F802A1611FFB216C000078B7 /* SACircularCountdown.h in Headers */ = {isa = PBXBuildFile; fileRef = F802A15F1FFB216C000078B7 /* SACircularCountdown.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F802A1751FFB22A2000078B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802A16B1FFB22A2000078B7 /* ViewController.swift */; };
-		F802A1771FFB22A2000078B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F802A16D1FFB22A2000078B7 /* Assets.xcassets */; };
-		F802A1781FFB22A2000078B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F802A16F1FFB22A2000078B7 /* LaunchScreen.storyboard */; };
-		F802A1791FFB22A2000078B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F802A1711FFB22A2000078B7 /* Main.storyboard */; };
-		F802A17A1FFB22A2000078B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802A1731FFB22A2000078B7 /* AppDelegate.swift */; };
-		F802A17B1FFB22A2000078B7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F802A1741FFB22A2000078B7 /* Info.plist */; };
-		F802A17D1FFB22CA000078B7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8F9A54F1C2F039200EE7C24 /* Info.plist */; };
-		F802A17F1FFB230A000078B7 /* SACircularCountdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802A17E1FFB230A000078B7 /* SACircularCountdown.swift */; };
-		F802A1801FFB2333000078B7 /* SACircularCountdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F802A15D1FFB216C000078B7 /* SACircularCountdown.framework */; };
-		F802A1811FFB2333000078B7 /* SACircularCountdown.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F802A15D1FFB216C000078B7 /* SACircularCountdown.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8141B8A2043D56D00406155 /* CircularCountdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85CB7502043D00B008B9544 /* CircularCountdown.swift */; };
+		F85CB7692043D09C008B9544 /* SACircularCountdown.h in Headers */ = {isa = PBXBuildFile; fileRef = F85CB7592043D09C008B9544 /* SACircularCountdown.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F85CB76C2043D09C008B9544 /* SACircularCountdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F85CB7572043D09C008B9544 /* SACircularCountdown.framework */; };
+		F85CB76D2043D09C008B9544 /* SACircularCountdown.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F85CB7572043D09C008B9544 /* SACircularCountdown.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8F9A5391C2F039200EE7C24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F9A5381C2F039200EE7C24 /* AppDelegate.swift */; };
+		F8F9A53B1C2F039200EE7C24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F9A53A1C2F039200EE7C24 /* ViewController.swift */; };
+		F8F9A53E1C2F039200EE7C24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8F9A53C1C2F039200EE7C24 /* Main.storyboard */; };
+		F8F9A5401C2F039200EE7C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8F9A53F1C2F039200EE7C24 /* Assets.xcassets */; };
+		F8F9A5431C2F039200EE7C24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8F9A5411C2F039200EE7C24 /* LaunchScreen.storyboard */; };
 		F8F9A54E1C2F039200EE7C24 /* SACircularCountdownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F9A54D1C2F039200EE7C24 /* SACircularCountdownTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,16 +51,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F802A15D1FFB216C000078B7 /* SACircularCountdown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SACircularCountdown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F802A15F1FFB216C000078B7 /* SACircularCountdown.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SACircularCountdown.h; sourceTree = "<group>"; };
-		F802A1601FFB216C000078B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F802A16B1FFB22A2000078B7 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F802A16D1FFB22A2000078B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F802A1701FFB22A2000078B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F802A1721FFB22A2000078B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F802A1731FFB22A2000078B7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F802A1741FFB22A2000078B7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F802A17E1FFB230A000078B7 /* SACircularCountdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SACircularCountdown.swift; sourceTree = "<group>"; };
+		F85CB7502043D00B008B9544 /* CircularCountdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularCountdown.swift; path = ../CircularCountdown.swift; sourceTree = "<group>"; };
+		F85CB7572043D09C008B9544 /* SACircularCountdown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SACircularCountdown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F85CB7592043D09C008B9544 /* SACircularCountdown.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SACircularCountdown.h; sourceTree = "<group>"; };
+		F85CB75A2043D09C008B9544 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8F9A5351C2F039200EE7C24 /* SACircularCountdownDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SACircularCountdownDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F9A5491C2F039200EE7C24 /* SACircularCountdownTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SACircularCountdownTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F9A54D1C2F039200EE7C24 /* SACircularCountdownTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SACircularCountdownTests.swift; sourceTree = "<group>"; };
@@ -98,9 +90,7 @@
 		F802A15E1FFB216C000078B7 /* SACircularCountdown */ = {
 			isa = PBXGroup;
 			children = (
-				F802A17E1FFB230A000078B7 /* SACircularCountdown.swift */,
-				F802A15F1FFB216C000078B7 /* SACircularCountdown.h */,
-				F802A1601FFB216C000078B7 /* Info.plist */,
+				F85CB7502043D00B008B9544 /* CircularCountdown.swift */,
 			);
 			path = SACircularCountdown;
 			sourceTree = "<group>";
@@ -303,7 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F802A17F1FFB230A000078B7 /* SACircularCountdown.swift in Sources */,
+				F8141B8A2043D56D00406155 /* CircularCountdown.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
