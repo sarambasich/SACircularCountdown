@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F802A15C1FFB216C000078B7"
-               BuildableName = "SACircularCountdown"
+               BlueprintIdentifier = "F84CBCD6212D0B2E0025917F"
+               BuildableName = "SACircularCountdown.framework"
                BlueprintName = "SACircularCountdown"
                ReferencedContainer = "container:SACircularCountdown.xcodeproj">
             </BuildableReference>
@@ -45,8 +45,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F802A15C1FFB216C000078B7"
-            BuildableName = "SACircularCountdown"
+            BlueprintIdentifier = "F84CBCD6212D0B2E0025917F"
+            BuildableName = "SACircularCountdown.framework"
             BlueprintName = "SACircularCountdown"
             ReferencedContainer = "container:SACircularCountdown.xcodeproj">
          </BuildableReference>
@@ -63,8 +63,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F802A15C1FFB216C000078B7"
-            BuildableName = "SACircularCountdown"
+            BlueprintIdentifier = "F84CBCD6212D0B2E0025917F"
+            BuildableName = "SACircularCountdown.framework"
             BlueprintName = "SACircularCountdown"
             ReferencedContainer = "container:SACircularCountdown.xcodeproj">
          </BuildableReference>

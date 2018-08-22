@@ -7,25 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F8141B8A2043D56D00406155 /* CircularCountdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85CB7502043D00B008B9544 /* CircularCountdown.swift */; };
-		F82478BE205CC8F40017A83F /* SACircularCountdown.h in Headers */ = {isa = PBXBuildFile; fileRef = F82478BC205CC8F10017A83F /* SACircularCountdown.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F82478CA205CC9200017A83F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F82478C4205CC91F0017A83F /* Assets.xcassets */; };
 		F82478CB205CC9200017A83F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F82478C5205CC91F0017A83F /* Info.plist */; };
 		F82478CC205CC9200017A83F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82478C6205CC91F0017A83F /* ViewController.swift */; };
 		F82478CD205CC9200017A83F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82478C7205CC9200017A83F /* AppDelegate.swift */; };
+		F84CBCD8212D0B2E0025917F /* CircularCountdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85CB7502043D00B008B9544 /* CircularCountdown.swift */; };
+		F84CBCDB212D0B2E0025917F /* SACircularCountdown.h in Headers */ = {isa = PBXBuildFile; fileRef = F82478BC205CC8F10017A83F /* SACircularCountdown.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F84CBCE3212D0C2B0025917F /* SACircularCountdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84CBCE0212D0B2E0025917F /* SACircularCountdown.framework */; };
 		F85AEF0B205CCEC800EB36C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F85AEF07205CCEC800EB36C4 /* Main.storyboard */; };
 		F85AEF0C205CCEC800EB36C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F85AEF09205CCEC800EB36C4 /* LaunchScreen.storyboard */; };
 		F8F9A54E1C2F039200EE7C24 /* SACircularCountdownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F9A54D1C2F039200EE7C24 /* SACircularCountdownTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F802A1821FFB2333000078B7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F8F9A52D1C2F039200EE7C24 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F802A15C1FFB216C000078B7;
-			remoteInfo = SACircularCountdown;
-		};
 		F8F9A54A1C2F039200EE7C24 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F8F9A52D1C2F039200EE7C24 /* Project object */;
@@ -55,6 +49,8 @@
 		F82478C5205CC91F0017A83F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F82478C6205CC91F0017A83F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F82478C7205CC9200017A83F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F84CBCE0212D0B2E0025917F /* SACircularCountdown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SACircularCountdown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F84CBCE1212D0B2F0025917F /* SACircularCountdown copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SACircularCountdown copy-Info.plist"; path = "/Users/stefan/Documents/programming/iOS/Libraries/SACircularCountdown/source/SACircularCountdown copy-Info.plist"; sourceTree = "<absolute>"; };
 		F85AEF08205CCEC800EB36C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F85AEF0A205CCEC800EB36C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F85CB7502043D00B008B9544 /* CircularCountdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularCountdown.swift; sourceTree = "<group>"; };
@@ -69,7 +65,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F802A1591FFB216C000078B7 /* Frameworks */ = {
+		F84CBCD9212D0B2E0025917F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -80,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F84CBCE3212D0C2B0025917F /* SACircularCountdown.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +113,13 @@
 			path = SACircularCountdownDemo;
 			sourceTree = "<group>";
 		};
+		F84CBCE2212D0C2B0025917F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F8ABF3C3212BA32600DD01BB /* TestFramework */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +147,8 @@
 				F8ABF3C3212BA32600DD01BB /* TestFramework */,
 				F8ABF3D0212BA32600DD01BB /* TestFrameworkTests */,
 				F8F9A5361C2F039200EE7C24 /* Products */,
+				F84CBCE1212D0B2F0025917F /* SACircularCountdown copy-Info.plist */,
+				F84CBCE2212D0C2B0025917F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +157,7 @@
 			children = (
 				F8F9A5351C2F039200EE7C24 /* SACircularCountdownDemo.app */,
 				F8F9A5491C2F039200EE7C24 /* SACircularCountdownTests.xctest */,
+				F84CBCE0212D0B2E0025917F /* SACircularCountdown.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,25 +174,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		F802A15A1FFB216C000078B7 /* Headers */ = {
+		F84CBCDA212D0B2E0025917F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F82478BE205CC8F40017A83F /* SACircularCountdown.h in Headers */,
+				F84CBCDB212D0B2E0025917F /* SACircularCountdown.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F802A15C1FFB216C000078B7 /* SACircularCountdown */ = {
+		F84CBCD6212D0B2E0025917F /* SACircularCountdown */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F802A1681FFB216C000078B7 /* Build configuration list for PBXNativeTarget "SACircularCountdown" */;
+			buildConfigurationList = F84CBCDD212D0B2E0025917F /* Build configuration list for PBXNativeTarget "SACircularCountdown" */;
 			buildPhases = (
-				F802A1581FFB216C000078B7 /* Sources */,
-				F802A1591FFB216C000078B7 /* Frameworks */,
-				F802A15A1FFB216C000078B7 /* Headers */,
-				F802A15B1FFB216C000078B7 /* Resources */,
+				F84CBCD7212D0B2E0025917F /* Sources */,
+				F84CBCD9212D0B2E0025917F /* Frameworks */,
+				F84CBCDA212D0B2E0025917F /* Headers */,
+				F84CBCDC212D0B2E0025917F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +200,7 @@
 			);
 			name = SACircularCountdown;
 			productName = SACircularCountdown;
+			productReference = F84CBCE0212D0B2E0025917F /* SACircularCountdown.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F8F9A5341C2F039200EE7C24 /* SACircularCountdownDemo */ = {
@@ -207,7 +215,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				F802A1831FFB2333000078B7 /* PBXTargetDependency */,
 			);
 			name = SACircularCountdownDemo;
 			productName = SACircularCountdown;
@@ -239,13 +246,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Stefan Arambasich";
 				TargetAttributes = {
-					F802A15C1FFB216C000078B7 = {
-						CreatedOnToolsVersion = 9.2;
+					F84CBCD6212D0B2E0025917F = {
 						DevelopmentTeam = 9MU89722E9;
-						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					F8F9A5341C2F039200EE7C24 = {
@@ -275,7 +280,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F802A15C1FFB216C000078B7 /* SACircularCountdown */,
+				F84CBCD6212D0B2E0025917F /* SACircularCountdown */,
 				F8F9A5481C2F039200EE7C24 /* SACircularCountdownTests */,
 				F8F9A5341C2F039200EE7C24 /* SACircularCountdownDemo */,
 			);
@@ -283,7 +288,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F802A15B1FFB216C000078B7 /* Resources */ = {
+		F84CBCDC212D0B2E0025917F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -311,11 +316,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F802A1581FFB216C000078B7 /* Sources */ = {
+		F84CBCD7212D0B2E0025917F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8141B8A2043D56D00406155 /* CircularCountdown.swift in Sources */,
+				F84CBCD8212D0B2E0025917F /* CircularCountdown.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,11 +344,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F802A1831FFB2333000078B7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F802A15C1FFB216C000078B7 /* SACircularCountdown */;
-			targetProxy = F802A1821FFB2333000078B7 /* PBXContainerItemProxy */;
-		};
 		F8F9A54B1C2F039200EE7C24 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F8F9A5341C2F039200EE7C24 /* SACircularCountdownDemo */;
@@ -371,7 +371,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F802A1661FFB216C000078B7 /* Debug */ = {
+		F84CBCDE212D0B2E0025917F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
@@ -388,7 +388,7 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -398,12 +398,12 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = SACircularCountdown/Info.plist;
+				INFOPLIST_FILE = "SACircularCountdown copy-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sarambasich.SACircularCountdown;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -414,7 +414,7 @@
 			};
 			name = Debug;
 		};
-		F802A1671FFB216C000078B7 /* Release */ = {
+		F84CBCDF212D0B2E0025917F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
@@ -431,7 +431,7 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -441,12 +441,12 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = SACircularCountdown/Info.plist;
+				INFOPLIST_FILE = "SACircularCountdown copy-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sarambasich.SACircularCountdown;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
@@ -468,12 +468,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -522,12 +524,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -628,11 +632,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F802A1681FFB216C000078B7 /* Build configuration list for PBXNativeTarget "SACircularCountdown" */ = {
+		F84CBCDD212D0B2E0025917F /* Build configuration list for PBXNativeTarget "SACircularCountdown" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F802A1661FFB216C000078B7 /* Debug */,
-				F802A1671FFB216C000078B7 /* Release */,
+				F84CBCDE212D0B2E0025917F /* Debug */,
+				F84CBCDF212D0B2E0025917F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
