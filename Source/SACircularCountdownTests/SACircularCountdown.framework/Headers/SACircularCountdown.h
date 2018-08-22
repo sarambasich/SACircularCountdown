@@ -2,7 +2,7 @@
 //  SACircularCountdown.h
 //  SACircularCountdown
 //
-//  Created by Stefan Arambasich on 1/1/18.
+//  Created by Stefan Arambasich on 2/26/18.
 //  Copyright © 2018 Stefan Arambasich. All rights reserved.
 //
 

@@ -26,7 +26,8 @@
 
 import UIKit
 
-private let π = CGFloat(Double.pi)
+/// The mathematical constant pi.
+private let π = Double.pi
 
 
 /// Circular-wedge shaped countdown widget.
@@ -65,12 +66,13 @@ private let π = CGFloat(Double.pi)
 
     // MARK: -
     // MARK: Private properties
-    
+
     /// Display link
     private var displayLink: CADisplayLink?
 
     /// The progress circle's path
-    fileprivate let circlePath = UIBezierPath()
+    private let circlePath = UIBezierPath()
+
     /// The progress circle's shape layer
     private let circleLayer = CAShapeLayer()
 
@@ -82,7 +84,7 @@ private let π = CGFloat(Double.pi)
 
     // MARK: -
     // MARK: Overrides
-    
+
     open override func draw(_ rect: CGRect) {
         super.draw(rect)
 
@@ -96,18 +98,6 @@ private let π = CGFloat(Double.pi)
     deinit {
         cleanUpDisplayLink()
     }
-    
-    /**
-        Removes old layers. Fills in the circle layer with stroke and fill colors.
-     
-         - parameter angle: Angle in degrees.
-         - parameter clockwise: Whether the angle is drawn clockwise. default=true
-     */
-    func drawCircleLayer(_ angle: CGFloat, clockwise: Bool = true) {
-        circleLayer.fillColor = circleColor?.cgColor
-        circleLayer.strokeColor = circleStrokeColor?.cgColor
-        circleLayer.lineWidth = circleStrokeWidth
-        circleLayer.path = drawCirclePath(angle)
 
 }
 
@@ -124,6 +114,13 @@ private extension CircularCountdown {
         layer.sublayers?.forEach {
             $0.removeFromSuperlayer()
         }
+
+        circleLayer.path = drawCirclePath(angle: angle)
+        circleLayer.fillColor = circleColor?.cgColor
+        circleLayer.strokeColor = strokeColor?.cgColor
+        circleLayer.lineWidth = strokeWidth
+
+        layer.addSublayer(circleLayer)
     }
 
     /// Draws the path for the circle wedge we want to display.
@@ -133,13 +130,16 @@ private extension CircularCountdown {
     func drawCirclePath(angle: CGFloat) -> CGPath {
         let center = CGPoint(x: bounds.size.width / 2.0, y: bounds.size.height / 2.0)
         circlePath.removeAllPoints()
-        circlePath.addArc(withCenter: center, radius: circleRadius, startAngle: 3.0*π/2.0,
-                          endAngle: angle.radians - π/2.0, clockwise: false)
+        circlePath.addArc(withCenter: center,
+                          radius: circleRadius,
+                          startAngle: CGFloat(3.0 * π/2.0),
+                          endAngle: angle.radians,
+                          clockwise: false)
         circlePath.addLine(to: center)
         circlePath.close()
         return circlePath.cgPath
     }
-    
+
     // MARK: -
     // MARK: `CADisplayLink` support
 
@@ -181,8 +181,7 @@ private extension CGFloat {
 
     /// Converts the receiver, assumed to be in degrees, to radians.
     var radians: CGFloat {
-        return self * π / 180.0
+        return self * CGFloat(π) / 180.0
     }
 
 }
-
