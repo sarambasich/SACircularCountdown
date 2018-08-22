@@ -104,7 +104,7 @@ private extension CircularCountdown {
     // MARK: -
     // MARK: Drawing
 
-    /// Removes old layers. Fills in the circle layer with stroke and fill colors.
+    /// Fills in the circle layer with stroke and fill colors.
     ///
     /// - Parameters:
     ///   - angle: Angle in degrees.
