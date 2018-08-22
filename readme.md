@@ -35,7 +35,6 @@ Adjust these properties to customize the behavior of the countdown wedge.
 * `circleRadius`: Size of the circle's radius `r`. Frame size will be the diameter `d` where `d = 2r`.
 * `strokeColor`: Optional stroke color for the progress circle.
 * `strokeWidth`: The width of the stroke around the wedge. Defaults to `0.0` (no stroke).
-* `angle`: The angle in degrees to set the indicator's progress at. Defaults to `0.0`.
 * `interval`: Length of cycle represented by this indicator. Defaults to `30.0` seconds.
 * `baseDate`: Base date to calculate timer's interval. Defaults to `Date()`.
 

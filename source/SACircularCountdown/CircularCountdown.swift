@@ -54,9 +54,6 @@ private let π = Double.pi
     /// The width of the stroke around the wedge. Defaults to `0.0` (no stroke).
     @IBInspectable open var strokeWidth: CGFloat = 0.0
 
-    /// The angle in degrees to set the indicator's progress at. Defaults to `0.0`.
-    @IBInspectable open var angle: CGFloat = 0.0
-
     /// Length of cycle represented by this indicator. Defaults to `30.0` seconds.
     @IBInspectable open var interval: TimeInterval = 30.0
 
@@ -79,6 +76,8 @@ private let π = Double.pi
 
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+
+
     }
 
     // MARK: -
@@ -91,7 +90,7 @@ private let π = Double.pi
             displayLink = CADisplayLink(target: self, selector: #selector(update(displayLink:)))
             startDisplayLink()
         }
-        drawCircleLayer(angle: angle)
+        drawCircleLayer(angle: 0.0)
     }
 
     deinit {
@@ -110,16 +109,14 @@ private extension CircularCountdown {
     /// - Parameters:
     ///   - angle: Angle in degrees.
     func drawCircleLayer(angle: CGFloat) {
-        layer.sublayers?.forEach {
-            $0.removeFromSuperlayer()
-        }
-
         circleLayer.path = drawCirclePath(angle: angle)
         circleLayer.fillColor = circleColor?.cgColor
         circleLayer.strokeColor = strokeColor?.cgColor
         circleLayer.lineWidth = strokeWidth
 
-        layer.addSublayer(circleLayer)
+        if circleLayer.superlayer == nil {
+            layer.addSublayer(circleLayer)
+        }
     }
 
     /// Draws the path for the circle wedge we want to display.
@@ -159,7 +156,7 @@ private extension CircularCountdown {
     @objc func update(displayLink: CADisplayLink) {
         guard displayLink === self.displayLink else { return }
 
-        let unicodeTimestamp = baseDate.timeIntervalSince1970
+        let unicodeTimestamp = baseDate.timeIntervalSinceNow
         let ofInterval = TimeInterval(
             fabs(unicodeTimestamp.truncatingRemainder(dividingBy: interval))
         )

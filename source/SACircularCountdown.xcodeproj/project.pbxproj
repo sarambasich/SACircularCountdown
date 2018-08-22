@@ -13,13 +13,21 @@
 		F82478CD205CC9200017A83F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82478C7205CC9200017A83F /* AppDelegate.swift */; };
 		F84CBCD8212D0B2E0025917F /* CircularCountdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85CB7502043D00B008B9544 /* CircularCountdown.swift */; };
 		F84CBCDB212D0B2E0025917F /* SACircularCountdown.h in Headers */ = {isa = PBXBuildFile; fileRef = F82478BC205CC8F10017A83F /* SACircularCountdown.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F84CBCE3212D0C2B0025917F /* SACircularCountdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84CBCE0212D0B2E0025917F /* SACircularCountdown.framework */; };
+		F84CBCE4212D10B10025917F /* SACircularCountdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84CBCE0212D0B2E0025917F /* SACircularCountdown.framework */; };
+		F84CBCE5212D10B10025917F /* SACircularCountdown.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F84CBCE0212D0B2E0025917F /* SACircularCountdown.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F85AEF0B205CCEC800EB36C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F85AEF07205CCEC800EB36C4 /* Main.storyboard */; };
 		F85AEF0C205CCEC800EB36C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F85AEF09205CCEC800EB36C4 /* LaunchScreen.storyboard */; };
 		F8F9A54E1C2F039200EE7C24 /* SACircularCountdownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F9A54D1C2F039200EE7C24 /* SACircularCountdownTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F84CBCE6212D10B10025917F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8F9A52D1C2F039200EE7C24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F84CBCD6212D0B2E0025917F;
+			remoteInfo = SACircularCountdown;
+		};
 		F8F9A54A1C2F039200EE7C24 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F8F9A52D1C2F039200EE7C24 /* Project object */;
@@ -36,6 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F84CBCE5212D10B10025917F /* SACircularCountdown.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F84CBCE3212D0C2B0025917F /* SACircularCountdown.framework in Frameworks */,
+				F84CBCE4212D10B10025917F /* SACircularCountdown.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +224,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F84CBCE7212D10B10025917F /* PBXTargetDependency */,
 			);
 			name = SACircularCountdownDemo;
 			productName = SACircularCountdown;
@@ -344,6 +354,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F84CBCE7212D10B10025917F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F84CBCD6212D0B2E0025917F /* SACircularCountdown */;
+			targetProxy = F84CBCE6212D10B10025917F /* PBXContainerItemProxy */;
+		};
 		F8F9A54B1C2F039200EE7C24 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F8F9A5341C2F039200EE7C24 /* SACircularCountdownDemo */;
@@ -388,7 +403,7 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -431,7 +446,7 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
