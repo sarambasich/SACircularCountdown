@@ -51,18 +51,17 @@ private let π = Double.pi
     /// Optional stroke color for the progress circle.
     @IBInspectable open var strokeColor: UIColor?
 
-    /// Defaults to 0.0 (no stroke).
+    /// The width of the stroke around the wedge. Defaults to `0.0` (no stroke).
     @IBInspectable open var strokeWidth: CGFloat = 0.0
 
-    /// The angle in degrees to set the indicator's progress at.
+    /// The angle in degrees to set the indicator's progress at. Defaults to `0.0`.
     @IBInspectable open var angle: CGFloat = 0.0
 
-    /// Length of cycle represented by this indicator.
-    @IBInspectable open var interval: CGFloat = 30.0
+    /// Length of cycle represented by this indicator. Defaults to `30.0` seconds.
+    @IBInspectable open var interval: TimeInterval = 30.0
 
-    /// Base date to calculate timer's interval; optional and defaults to
-    /// `Date()` when needed.
-    open var baseDate: Date?
+    /// Base date to calculate timer's interval. Defaults to `Date()`.
+    open var baseDate = Date()
 
     // MARK: -
     // MARK: Private properties
@@ -160,12 +159,9 @@ private extension CircularCountdown {
     @objc func update(displayLink: CADisplayLink) {
         guard displayLink === self.displayLink else { return }
 
-        let unicodeTimestamp = (baseDate ?? Date()).timeIntervalSince1970
+        let unicodeTimestamp = baseDate.timeIntervalSince1970
         let ofInterval = TimeInterval(
-            fabs(
-                unicodeTimestamp
-                    .truncatingRemainder(dividingBy: TimeInterval(interval))
-            )
+            fabs(unicodeTimestamp.truncatingRemainder(dividingBy: interval))
         )
         let progress = CGFloat(ofInterval) / CGFloat(interval)
         drawCircleLayer(angle: 360.0 * progress)
