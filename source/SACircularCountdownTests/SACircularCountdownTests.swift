@@ -1,8 +1,8 @@
 //
-//  SACircularCountdown.h
-//  SACircularCountdown
+//  SACircularCountdownTests.swift
+//  SACircularCountdownTests
 //
-//  Created by Stefan Arambasich on 1/1/18.
+//  Created by Stefan Arambasich on 2/26/18.
 //
 //  Copyright (c) 2015-2018 Stefan Arambasich. All rights reserved.
 //
@@ -24,14 +24,12 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+import XCTest
+@testable import SACircularCountdown
 
-//! Project version number for SACircularCountdown.
-FOUNDATION_EXPORT double SACircularCountdownVersionNumber;
+class SACircularCountdownTests: XCTestCase {
 
-//! Project version string for SACircularCountdown.
-FOUNDATION_EXPORT const unsigned char SACircularCountdownVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <SACircularCountdown/PublicHeader.h>
-
-
+    func testCircularCountdown() {
+        XCTAssertEqual(1 + 2, 3)
+    }
+}

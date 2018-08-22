@@ -1,0 +1,11 @@
+framework module SACircularCountdown {
+  umbrella header "SACircularCountdown.h"
+
+  export *
+  module * { export * }
+}
+
+module SACircularCountdown.Swift {
+    header "SACircularCountdown-Swift.h"
+    requires objc
+}

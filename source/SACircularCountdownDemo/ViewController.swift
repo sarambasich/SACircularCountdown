@@ -28,8 +28,6 @@ import UIKit
 
 import SACircularCountdown
 
-
-
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
