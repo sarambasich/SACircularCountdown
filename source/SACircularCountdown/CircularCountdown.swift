@@ -141,7 +141,7 @@ private extension CircularCountdown {
 
     /// Add the display link to the current run loop.
     func startDisplayLink() {
-        displayLink?.add(to: .current, forMode: .defaultRunLoopMode)
+        displayLink?.add(to: .current, forMode: .default)
     }
 
     /// Removes from the run loop and releases `CADisplayLink`.
